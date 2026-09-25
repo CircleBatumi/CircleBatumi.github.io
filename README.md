@@ -18,10 +18,3 @@ CircleBatumi არის GitHub Pages-ზე გასაშვები სტ
 
 რეალური ვერსიისთვის საჭიროა backend/database (მაგ. Supabase/Firebase/PostgreSQL) და უსაფრთხო server-side authentication.
 
-## GitHub Pages
-1. გახსენი ZIP და ატვირთე შიგნით არსებული ფაილები GitHub repository-ის root-ში.
-2. Settings → Pages.
-3. Source: Deploy from a branch.
-4. Branch: `main`, folder: `/ (root)`.
-
-თუ repository ჰქვია `<username>.github.io`, მისამართი იქნება `https://<username>.github.io/`.
