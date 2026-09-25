@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 128" role="img" aria-label="CircleBatumi">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0b6e4f"/>
+      <stop offset="1" stop-color="#18a97a"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="120" height="120" rx="30" fill="#eefaf5"/>
+  <path d="M31 65a33 33 0 0 1 51-28" fill="none" stroke="url(#g)" stroke-width="11" stroke-linecap="round"/>
+  <path d="M78 27l14 7-11 11" fill="none" stroke="#18a97a" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M97 63a33 33 0 0 1-52 28" fill="none" stroke="url(#g)" stroke-width="11" stroke-linecap="round"/>
+  <path d="M49 101l-14-7 11-11" fill="none" stroke="#0b6e4f" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M40 70c10-4 17-3 25 1 9 4 16 4 24 0" fill="none" stroke="#2d9cdb" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="64" cy="57" r="6" fill="#f1bd4a"/>
+  <text x="148" y="79" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="50" font-weight="800" letter-spacing="-2" fill="#10241c">Circle<tspan fill="#0b6e4f">Batumi</tspan></text>
+</svg>

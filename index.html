@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="ka">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#071c18" />
+  <meta name="description" content="CircleBatumi — ბათუმში ნარჩენების ჩაბარების, დადასტურებისა და პირადი ეკო-წვლილის პლატფორმა." />
+  <title>CircleBatumi — შენი ნარჩენი, შენი წვლილი</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <div id="toast" class="toast" aria-live="polite"></div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-shell">
+      <button class="brand" id="brandBtn" type="button" aria-label="CircleBatumi — მთავარი">
+        <img src="logo.svg" alt="CircleBatumi" />
+      </button>
+      <nav class="nav-links" aria-label="მთავარი ნავიგაცია">
+        <button type="button" data-scroll="companies">კომპანიები</button>
+        <button type="button" data-scroll="process">როგორ მუშაობს</button>
+        <button type="button" data-scroll="impact">წვლილი</button>
+      </nav>
+      <div class="nav-actions" id="navActions">
+        <button class="btn btn-plain" id="loginBtn" type="button">შესვლა</button>
+        <button class="btn btn-accent" id="signupBtn" type="button">რეგისტრაცია</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-orb orb-a"></div>
+      <div class="hero-orb orb-b"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow"><span></span> ბათუმის ცირკულარული პლატფორმა</div>
+          <h1><span class="hero-title-top">ნარჩენს აქვს</span><span class="hero-title-bottom">მეორე გზა.</span></h1>
+          <p class="hero-lead">CircleBatumi აკავშირებს მოქალაქესა და ნარჩენის მიმღებ კომპანიას. ჩააბარე, დააფიქსირე კილოგრამები, მიიღე კომპანიის დადასტურება და ნახე შენი რეალური წვლილი ერთ პროფილში.</p>
+          <div class="hero-cta">
+            <button class="btn btn-accent btn-xl" data-scroll="companies" type="button">იპოვე კომპანია <span>↗</span></button>
+            <button class="btn btn-glass btn-xl" id="openProfileHero" type="button">ჩემი პროფილი</button>
+          </div>
+          <div class="hero-footnote">
+            <div class="mini-stack"><span>kg</span><span>✓</span><span>♻</span></div>
+            <p><strong>დადასტურებული ჩანაწერი</strong> ავტომატურად ემატება შენს ეკო-წვლილს.</p>
+          </div>
+        </div>
+
+        <div class="hero-stage reveal delay-1" aria-label="CircleBatumi პროფილის ვიზუალური მაგალითი">
+          <div class="stage-glow"></div>
+          <div class="dashboard-card">
+            <div class="dash-top">
+              <div class="dash-logo"><img src="favicon.svg" alt="" /><span>CircleBatumi</span></div>
+              <span class="status-live"><i></i> აქტიური</span>
+            </div>
+            <div class="dash-user">
+              <div class="avatar">ნ</div>
+              <div><small>ეკო-პროფილი</small><strong>ნინო ბ.</strong></div>
+              <span class="rank">მწვანე დონე</span>
+            </div>
+            <div class="dash-main-stat">
+              <small>დადასტურებული წვლილი</small>
+              <div class="stat-row"><strong>42.6</strong><span>კგ</span><b>+12%</b></div>
+              <div class="progress"><i style="width:71%"></i></div>
+              <p>60 კგ ნიშნულამდე დარჩა 17.4 კგ</p>
+            </div>
+            <div class="dash-grid">
+              <div><small>ჩაბარება</small><strong>11</strong></div>
+              <div><small>კომპანია</small><strong>4</strong></div>
+              <div><small>ეკო-ქულა</small><strong>426</strong></div>
+            </div>
+            <div class="activity-title"><span>ბოლო აქტივობა</span><small>ისტორია →</small></div>
+            <div class="activity-row">
+              <div class="material-icon plastic">P</div>
+              <div><strong>პლასტმასი</strong><small>შპს „ზუგო“</small></div>
+              <div class="activity-value"><strong>5.4 კგ</strong><small>დადასტურებულია</small></div>
+            </div>
+            <div class="activity-row">
+              <div class="material-icon paper">Q</div>
+              <div><strong>ქაღალდი</strong><small>RONI</small></div>
+              <div class="activity-value"><strong>8.0 კგ</strong><small>დადასტურებულია</small></div>
+            </div>
+          </div>
+          <div class="float-note float-one"><span>✓</span><div><strong>ჩაბარება დადასტურდა</strong><small>+5.4 კგ შენს წვლილში</small></div></div>
+          <div class="float-note float-two"><small>ეკო-ქულა</small><strong>+54</strong></div>
+        </div>
+      </div>
+
+      <div class="container hero-metrics reveal delay-2">
+        <div><strong>6</strong><span>ბათუმში შერჩეული კომპანია</span></div>
+        <div><strong>1</strong><span>პროფილი ყველა ჩაბარებისთვის</span></div>
+        <div><strong>100%</strong><span>წვლილი მხოლოდ დადასტურებული კილოგრამებიდან</span></div>
+      </div>
+    </section>
+
+    <section class="section companies-section" id="companies">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="section-kicker">სად ჩავაბარო?</span>
+            <h2>ბათუმის ნარჩენების<br>მიმღები კომპანიები</h2>
+          </div>
+          <p>აირჩიე მასალა და ნახე შესაბამისი კომპანია. თითო ბარათში მითითებულია საქმიანობა, მისამართი და საკონტაქტო ინფორმაცია.</p>
+        </div>
+
+        <div class="catalog-tools reveal">
+          <div class="search-box">
+            <span>⌕</span>
+            <input id="companySearch" type="search" placeholder="მოძებნე კომპანია ან ნარჩენის ტიპი..." autocomplete="off" />
+          </div>
+          <div class="filters" id="filters" aria-label="ნარჩენის ტიპის ფილტრი">
+            <button class="filter active" data-filter="all" type="button">ყველა</button>
+            <button class="filter" data-filter="plastic" type="button">პლასტმასი</button>
+            <button class="filter" data-filter="paper" type="button">ქაღალდი</button>
+            <button class="filter" data-filter="battery" type="button">ელემენტები</button>
+            <button class="filter" data-filter="electronics" type="button">ელექტრონიკა</button>
+          </div>
+        </div>
+
+        <div class="company-grid" id="companyGrid"></div>
+        <div class="source-note reveal">
+          <span>i</span>
+          <p>კომპანიების ძირითადი მონაცემები აღებულია ბათუმის მუნიციპალიტეტის 2023–2027 წლების მუნიციპალური ნარჩენების მართვის გეგმიდან და საჯარო წყაროებიდან. ინდუსტრიულ საწარმოსთან მოქალაქის მიერ ჩაბარების პირობა და სამუშაო დრო წინასწარ გადაამოწმე კომპანიასთან.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process-section" id="process">
+      <div class="container process-grid">
+        <div class="process-intro reveal">
+          <span class="section-kicker light">ერთი მარტივი ციკლი</span>
+          <h2>ჩაბარება, რომელიც<br>არ იკარგება.</h2>
+          <p>ყველა ნაბიჯი მიბმულია შენს ანგარიშზე — კომპანიიდან დადასტურებამდე და საბოლოო ეკო-შედეგამდე.</p>
+          <div class="process-code">
+            <span>ჩანაწერის კოდი</span>
+            <strong>CB-8F2K1Q</strong>
+            <small>კომპანიას შეუძლია ამ კოდითაც იპოვოს შენი ჩაბარება.</small>
+          </div>
+        </div>
+        <div class="steps-list reveal delay-1">
+          <article>
+            <span class="step-no">01</span>
+            <div><h3>შედი შენს პროფილში</h3><p>შექმენი ანგარიში username-ითა და პაროლით. თითო მომხმარებელს აქვს საკუთარი ისტორია.</p></div>
+          </article>
+          <article>
+            <span class="step-no">02</span>
+            <div><h3>ჩააბარე და მიუთითე წონა</h3><p>აირჩიე კომპანია, ნარჩენის ტიპი და ზუსტი კილოგრამები. იქმნება უნიკალური ჩაბარების კოდი.</p></div>
+          </article>
+          <article>
+            <span class="step-no">03</span>
+            <div><h3>კომპანია ადასტურებს</h3><p>კომპანიის ანგარიშში ჩანაწერი მოწმდება. მხოლოდ დადასტურების შემდეგ ითვლება წვლილი შესრულებულად.</p></div>
+          </article>
+          <article>
+            <span class="step-no">04</span>
+            <div><h3>წვლილი იზრდება პროფილში</h3><p>კილოგრამები, კომპანიები, მასალები და სრული ისტორია ავტომატურად ერთიანდება შენს ანგარიშში.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section impact-section" id="impact">
+      <div class="container impact-grid">
+        <div class="impact-card reveal">
+          <div class="impact-card-top"><span>შენი წვლილი</span><b>CircleBatumi</b></div>
+          <div class="impact-total"><strong>42.6</strong><span>კგ</span></div>
+          <p>დადასტურებული ნარჩენი</p>
+          <div class="impact-bars">
+            <div><span>პლასტმასი <b>24.2 კგ</b></span><i><em style="width:86%"></em></i></div>
+            <div><span>ქაღალდი <b>12.6 კგ</b></span><i><em style="width:58%"></em></i></div>
+            <div><span>ელექტრონიკა <b>5.8 კგ</b></span><i><em style="width:32%"></em></i></div>
+          </div>
+        </div>
+        <div class="impact-copy reveal delay-1">
+          <span class="section-kicker">შედეგი, რომელსაც ხედავ</span>
+          <h2>შენი ეკო-ისტორია<br>ერთ პროფილში.</h2>
+          <p>პროფილი აჩვენებს მხოლოდ კომპანიის მიერ დადასტურებულ ჩაბარებებს. ასე წვლილი ხდება გაზომვადი, გამჭვირვალე და ადვილად სანახავი.</p>
+          <div class="impact-points">
+            <div><span>✓</span><p><strong>სრული ისტორია</strong><small>კომპანია, მასალა, კილოგრამი, თარიღი</small></p></div>
+            <div><span>↗</span><p><strong>პირადი პროგრესი</strong><small>ჯამური წონა და მასალების განაწილება</small></p></div>
+            <div><span>#</span><p><strong>უნიკალური კოდი</strong><small>თითოეულ ჩაბარებას აქვს თავისი ჩანაწერი</small></p></div>
+          </div>
+          <button class="btn btn-dark btn-xl" id="impactProfileBtn" type="button">გახსენი ჩემი პროფილი <span>→</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section profile-section hidden" id="profileSection">
+      <div class="container" id="profileContent"></div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container cta-panel reveal">
+        <div>
+          <span>CircleBatumi</span>
+          <h2>შენი შემდეგი ჩაბარება<br>შენი ისტორიის ნაწილია.</h2>
+        </div>
+        <button class="btn btn-accent btn-xl" id="ctaBtn" type="button">დაიწყე ახლა <span>↗</span></button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand"><img src="logo.svg" alt="CircleBatumi" /><p>ბათუმის ნარჩენების ჩაბარებისა და პირადი ეკო-წვლილის ციფრული პლატფორმა.</p></div>
+      <div><strong>ნავიგაცია</strong><button data-scroll="companies" type="button">კომპანიები</button><button data-scroll="process" type="button">როგორ მუშაობს</button><button id="footerProfileBtn" type="button">ჩემი პროფილი</button></div>
+      <div><strong>მნიშვნელოვანი</strong><p>ეს ვერსია არის ფუნქციური დემო-პროტოტიპი. ანგარიშის მონაცემები ინახება ამ ბრაუზერში.</p></div>
+    </div>
+    <div class="container footer-bottom"><span>© 2026 CircleBatumi</span><span>Batumi • Georgia</span></div>
+  </footer>
+
+  <dialog class="modal" id="authModal">
+    <div class="modal-shell auth-shell">
+      <button class="modal-close" data-close="authModal" type="button" aria-label="დახურვა">×</button>
+      <div class="auth-aside">
+        <img src="logo.svg" alt="CircleBatumi" />
+        <div><span>შენი ანგარიში</span><h3>ყველა ჩაბარება.<br>ერთი ეკო-ისტორია.</h3><p>შედი ან შექმენი ანგარიში, რომ შენი დადასტურებული კილოგრამები ყოველთვის ერთ პროფილში შეინახო.</p></div>
+      </div>
+      <div class="auth-main">
+        <div class="auth-tabs"><button class="active" id="loginTab" type="button">შესვლა</button><button id="signupTab" type="button">რეგისტრაცია</button></div>
+        <form id="loginForm" class="form-stack">
+          <label>მომხმარებლის სახელი<input id="loginUsername" required autocomplete="username" placeholder="მაგ. nino25" /></label>
+          <label>პაროლი<input id="loginPassword" type="password" required autocomplete="current-password" placeholder="••••••••" /></label>
+          <button class="btn btn-accent btn-full" type="submit">შესვლა</button>
+          <p class="form-hint">ავტორიზაცია ხდება მხოლოდ CircleBatumi-ის username-ითა და პაროლით.</p>
+        </form>
+        <form id="signupForm" class="form-stack hidden">
+          <div class="role-switch" id="roleSwitch"><button class="active" data-role="user" type="button">მოქალაქე</button><button data-role="company" type="button">კომპანია</button></div>
+          <input id="signupRole" type="hidden" value="user" />
+          <label>სახელი / პასუხისმგებელი პირი<input id="signupName" required placeholder="სახელი და გვარი" /></label>
+          <label>მომხმარებლის სახელი<input id="signupUsername" required autocomplete="username" minlength="3" placeholder="მაგ. nino25" /></label>
+          <label>პაროლი<input id="signupPassword" type="password" required autocomplete="new-password" minlength="6" placeholder="მინ. 6 სიმბოლო" /></label>
+          <label class="hidden" id="companySelectWrap">კომპანია<select id="signupCompany"></select></label>
+          <button class="btn btn-accent btn-full" type="submit">ანგარიშის შექმნა</button>
+        </form>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="modal" id="recordModal">
+    <div class="modal-shell compact-shell">
+      <button class="modal-close" data-close="recordModal" type="button" aria-label="დახურვა">×</button>
+      <div class="modal-title"><span>ახალი ჩაბარება</span><h3>დააფიქსირე ნარჩენი</h3><p>შენი ჩანაწერი დადასტურებას დაელოდება არჩეული კომპანიის ანგარიშში.</p></div>
+      <form id="recordForm" class="form-stack">
+        <label>კომპანია<select id="recordCompany" required></select></label>
+        <label>ნარჩენის ტიპი<select id="recordMaterial" required></select></label>
+        <label>წონა (კგ)<input id="recordWeight" type="number" min="0.01" step="0.01" required placeholder="მაგ. 4.50" /></label>
+        <label>შენიშვნა <small>(არასავალდებულო)</small><textarea id="recordNote" rows="3" placeholder="მაგ. შეფუთული და გასუფთავებული მასალა"></textarea></label>
+        <div class="record-summary"><span>ჩანაწერს მიენიჭება უნიკალური კოდი</span><strong id="previewCode">CB-••••••</strong></div>
+        <button class="btn btn-accent btn-full" type="submit">ჩაბარების გაგზავნა დასადასტურებლად</button>
+      </form>
+    </div>
+  </dialog>
+
+  <dialog class="modal" id="companyRecordModal">
+    <div class="modal-shell compact-shell">
+      <button class="modal-close" data-close="companyRecordModal" type="button" aria-label="დახურვა">×</button>
+      <div class="modal-title"><span>კომპანიის ჩანაწერი</span><h3>დაამატე ჩაბარება</h3><p>თუ მოქალაქემ ნარჩენი უკვე ჩააბარა, კომპანიას შეუძლია ჩანაწერი პირდაპირ დაუდასტუროს.</p></div>
+      <form id="companyRecordForm" class="form-stack">
+        <label>მომხმარებლის username<input id="companyRecordUsername" required placeholder="მაგ. nino25" /></label>
+        <label>ნარჩენის ტიპი<select id="companyRecordMaterial" required></select></label>
+        <label>წონა (კგ)<input id="companyRecordWeight" type="number" min="0.01" step="0.01" required placeholder="მაგ. 7.20" /></label>
+        <button class="btn btn-accent btn-full" type="submit">ჩაბარების დადასტურება და ჩაწერა</button>
+      </form>
+    </div>
+  </dialog>
+
+  <dialog class="modal" id="companyDetailModal">
+    <div class="modal-shell compact-shell company-detail-shell">
+      <button class="modal-close" data-close="companyDetailModal" type="button" aria-label="დახურვა">×</button>
+      <div id="companyDetailContent"></div>
+    </div>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
